@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dr. ColorChip - Growth Strategy & Website Redesign</title>
+<meta name="description" content="A growth strategy and website redesign proposal for Dr. ColorChip: modern Shopify rebuild, an industry-best color finder, product-line expansion, Amazon, and paid scaling." />
+<meta name="robots" content="noindex" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --blue:#1573E6;--blue-deep:#0B4FB0;--blue-ink:#0A2A5E;
+  --orange:#F26A21;--orange-2:#FF8A3D;--teal:#17b3c6;
+  --ink:#15233b;--ink-2:#3a4a63;--muted:#66788f;
+  --line:#e7edf6;--soft:#f6f9fd;--soft-blue:#edf4fe;--soft-orange:#fef1e9;
+  --radius:16px;--radius-lg:24px;
+  --shadow:0 10px 30px rgba(16,40,80,.08);--shadow-lg:0 24px 60px rgba(11,79,176,.13);
+  --grad:linear-gradient(120deg,var(--blue),var(--blue-deep));
+  --grad-hot:linear-gradient(120deg,var(--orange-2),var(--orange));
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:Sora,sans-serif;margin:0;line-height:1.12;letter-spacing:-.02em}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.narrow{max-width:840px}
+section{padding:66px 0}
+.tint{background:var(--soft)}
+.tint-blue{background:linear-gradient(180deg,var(--soft-blue),#fff)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:Sora;font-weight:700;font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--blue-deep);background:#fff;border:1px solid var(--line);padding:6px 13px;border-radius:100px;box-shadow:var(--shadow)}
+.eyebrow img{height:16px;width:auto}
+.eyebrow.center{margin:0 auto}
+.sec-head{max-width:720px;margin:0 0 34px}
+.sec-head.center{margin:0 auto 34px;text-align:center}
+h2.big{font-size:clamp(28px,4vw,42px);font-weight:800;margin-top:16px}
+.sec-head p{color:var(--muted);font-size:17.5px;margin-top:12px}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:Sora;font-weight:700;font-size:15px;border:0;border-radius:100px;padding:14px 24px;cursor:pointer;text-decoration:none;transition:.18s transform,.18s box-shadow}
+.btn:hover{transform:translateY(-2px)}
+.btn-blue{background:var(--grad);color:#fff;box-shadow:0 10px 24px rgba(21,115,230,.28)}
+.btn-orange{background:var(--grad-hot);color:#fff;box-shadow:0 10px 24px rgba(242,106,33,.30)}
+.btn-ghost{background:#fff;color:var(--blue-deep);box-shadow:inset 0 0 0 1.6px var(--line)}
+.btn-lg{padding:17px 30px;font-size:16.5px}
+.arrow{font-size:1.1em;line-height:1}
+
+/* header */
+header.rpt{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+header.rpt .wrap{display:flex;align-items:center;gap:16px;padding:12px 24px;max-width:1200px}
+header.rpt .logo{height:40px;width:auto}
+header.rpt .tag{font-family:Sora;font-weight:700;font-size:13px;color:var(--muted);border-left:1px solid var(--line);padding-left:14px}
+header.rpt .sp{margin-left:auto}
+@media(max-width:640px){header.rpt .tag{display:none}}
+
+/* cover */
+.cover{background:
+  radial-gradient(1200px 560px at 85% -10%,rgba(23,179,198,.12),transparent 60%),
+  radial-gradient(1000px 520px at 5% 0%,rgba(21,115,230,.12),transparent 55%),
+  linear-gradient(180deg,#fff,#f4f8fe);
+  padding:64px 0 72px;border-bottom:1px solid var(--line)}
+.cover .wrap{max-width:1000px;text-align:center}
+.cover .coverlogo{height:120px;width:auto;margin:0 auto 26px;display:block;filter:drop-shadow(0 16px 30px rgba(11,79,176,.12))}
+.cover h1{font-size:clamp(32px,5.4vw,58px);font-weight:800}
+.cover h1 .hl{background:var(--grad-hot);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cover .lede{font-size:19px;color:var(--ink-2);max-width:60ch;margin:18px auto 0}
+.cover .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+.cover .meta{margin-top:26px;font-size:13.5px;color:var(--muted)}
+
+/* stat cards */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+.stat .v{font-family:Sora;font-weight:800;font-size:32px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
+.stat .l{font-size:13.5px;color:var(--muted);margin-top:8px;font-weight:600}
+.stat.hot .v{background:var(--grad-hot);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* generic cards */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+.card h3{font-size:18px;font-weight:700;display:flex;align-items:center;gap:10px}
+.card p{color:var(--ink-2);font-size:15px;margin:10px 0 0}
+.ic{width:44px;height:44px;border-radius:12px;background:var(--grad);display:grid;place-items:center;color:#fff;font-family:Sora;font-weight:800;flex:none}
+.ic.hot{background:var(--grad-hot)}
+ul.clean{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:11px}
+ul.clean li{display:flex;gap:11px;font-size:15.5px;color:var(--ink-2)}
+ul.clean li::before{content:"";width:18px;height:18px;flex:none;margin-top:3px;border-radius:6px;background:var(--soft-blue) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231573E6' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E") center/12px no-repeat}
+ul.clean li b{color:var(--ink)}
+
+/* callout */
+.callout{background:linear-gradient(120deg,var(--soft-orange),#fff);border:1px solid #f6d9c6;border-left:5px solid var(--orange);border-radius:14px;padding:22px 24px;font-size:16px;color:var(--ink-2)}
+.callout b{color:var(--ink)}
+.callout.blue{background:linear-gradient(120deg,var(--soft-blue),#fff);border-color:#cfe0fb;border-left-color:var(--blue)}
+
+/* table */
+.tbl{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);font-size:14.5px}
+.tbl th,.tbl td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--line)}
+.tbl th{background:var(--soft);font-family:Sora;font-weight:700;font-size:12.5px;letter-spacing:.03em;text-transform:uppercase;color:var(--muted)}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td b{color:var(--ink)}
+.tbl .us{background:var(--soft-blue)}
+.tbl .us td:first-child{font-weight:700;color:var(--blue-deep)}
+
+/* compare */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.cc{border-radius:var(--radius);padding:26px;border:1px solid var(--line)}
+.cc.bad{background:#fbf3f3;border-color:#f2d5d5}
+.cc.good{background:#eef8f1;border-color:#cfe9d6}
+.cc .h{font-family:Sora;font-weight:800;font-size:16px;display:flex;align-items:center;gap:9px;margin-bottom:12px}
+.cc.bad .h{color:#c0392b}.cc.good .h{color:#1f8a4c}
+.cc ul{list-style:none;padding:0;margin:0;display:grid;gap:9px;font-size:14.5px;color:var(--ink-2)}
+.cc.bad li::before{content:"✕ ";color:#c0392b;font-weight:800}
+.cc.good li::before{content:"✓ ";color:#1f8a4c;font-weight:800}
+
+/* roadmap */
+.road{display:grid;gap:14px}
+.step{display:flex;gap:18px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 22px;box-shadow:var(--shadow)}
+.step .n{width:40px;height:40px;border-radius:11px;background:var(--grad);color:#fff;display:grid;place-items:center;font-family:Sora;font-weight:800;flex:none}
+.step h3{font-size:16.5px}
+.step p{color:var(--muted);font-size:14.5px;margin:5px 0 0}
+
+/* cta band */
+.ctaband{background:var(--grad);color:#fff;text-align:center;border-radius:0}
+.ctaband h2{color:#fff;font-size:clamp(26px,3.8vw,40px);font-weight:800}
+.ctaband p{color:#dbe8fb;font-size:17px;margin:12px 0 26px}
+.ctaband .btn-white{background:#fff;color:var(--blue-deep)}
+.ctaband img{height:60px;margin:0 auto 20px;display:block;filter:brightness(0) invert(1);opacity:.95}
+
+/* footer */
+footer.rpt{background:#0e1b2e;color:#9fb0c9;padding:40px 0;text-align:center;font-size:13.5px}
+footer.rpt img{height:44px;background:#fff;border-radius:10px;padding:7px 12px;margin-bottom:14px}
+footer.rpt p{margin:6px 0}
+
+@media(max-width:860px){.stats{grid-template-columns:1fr 1fr}.grid2,.grid3,.compare{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="rpt"><div class="wrap">
+  <img class="logo" src="assets/logo-full.png" alt="Dr. ColorChip" />
+  <span class="tag">Growth Strategy &amp; Website Redesign</span>
+  <a class="btn btn-blue sp" href="./site/" target="_blank" rel="noopener">View the redesign <span class="arrow">&rarr;</span></a>
+</div></header>
+
+<!-- COVER -->
+<section class="cover">
+  <div class="wrap">
+    <img class="coverlogo" src="assets/logo-full.png" alt="Dr. ColorChip" />
+    <h1>A brand this strong should be <span class="hl">dominating.</span></h1>
+    <p class="lede">Dr. ColorChip has a million-plus customers, a trusted name since 2003, and a great product. But the website, the SEO, and Amazon are leaving enormous money on the table. Here's the opportunity - and exactly how we capture it.</p>
+    <div class="cta">
+      <a class="btn btn-ghost btn-lg" href="https://drcolorchip.com" target="_blank" rel="noopener">Current website</a>
+      <a class="btn btn-orange btn-lg" href="./site/" target="_blank" rel="noopener">See the proposed redesign <span class="arrow">&rarr;</span></a>
+    </div>
+    <div class="meta">Prepared for the owners of Dr. ColorChip &nbsp;·&nbsp; Strategy + redesign concept &nbsp;·&nbsp; 2026</div>
+  </div>
+</section>
+
+<!-- OPPORTUNITY -->
+<section>
+  <div class="wrap narrow">
+    <span class="eyebrow"><img src="assets/logo-car.png" alt="" /> The opportunity</span>
+    <h2 class="big" style="margin-top:16px">It's a gold mine hiding behind old execution</h2>
+    <p style="font-size:18px;color:var(--ink-2);margin-top:14px">The demand already exists and the brand equity is already built. Nothing here requires inventing a market - it requires modern execution. Fixing the direct-to-consumer and retail experience (website + Amazon) alone could realistically <b>2-3x sales</b>.</p>
+    <div class="callout" style="margin-top:24px"><b>The whole thesis in one line:</b> Dr. ColorChip is winning small on a great brand. Modernize the site, add a mass-market product, fix Amazon, and turn on advertising - and the ceiling is many times today's business.</div>
+  </div>
+</section>
+
+<!-- SNAPSHOT STATS -->
+<section class="tint">
+  <div class="wrap">
+    <div class="sec-head center"><span class="eyebrow center"><img src="assets/logo-car.png" alt="" /> The snapshot</span><h2 class="big">Where things stand today</h2></div>
+    <div class="stats">
+      <div class="stat"><div class="v">1M+</div><div class="l">Customers since 2003</div></div>
+      <div class="stat"><div class="v">36,551</div><div class="l">Monthly organic visits</div></div>
+      <div class="stat hot"><div class="v">~96%</div><div class="l">Of traffic is their own brand name</div></div>
+      <div class="stat hot"><div class="v">11</div><div class="l">Paid keywords (ads basically off)</div></div>
+    </div>
+    <p style="text-align:center;color:var(--muted);font-size:13.5px;margin-top:16px">Source: SEMrush, drcolorchip.com (US). 2,296 organic keywords · ~$15,771/mo in organic traffic value.</p>
+  </div>
+</section>
+
+<!-- THE AUDIT -->
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><img src="assets/logo-car.png" alt="" /> The honest audit</span><h2 class="big">The best feature is the weakest execution</h2></div>
+    <div class="grid3">
+      <div class="card"><h3><span class="ic hot">1</span> The color finder fails</h3><p>Their #1 feature - and the #1 customer pain point - is a text-only list with locked dropdowns and <b>no color chip at all.</b> Of nine competitors we studied, it's the only one showing no visual swatch.</p></div>
+      <div class="card"><h3><span class="ic hot">2</span> A dated site</h3><p>A tired ~2018-era WordPress build with years of accumulated cruft, no modern speed, and no premium feel. Functional, but nothing about it says "trusted leader."</p></div>
+      <div class="card"><h3><span class="ic hot">3</span> It looks intimidating</h3><p>The experience leads with pipettes, squeegees, and technique - so the everyday person with one scratch bounces. Nowhere does it say "this is easy."</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SEO REALITY -->
+<section class="tint-blue">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><img src="assets/logo-car.png" alt="" /> The SEO reality</span><h2 class="big">Harvesting the brand, not winning the category</h2><p>Live SEMrush data confirms it: almost all organic traffic is people typing the brand name. The category and long-tail terms - where the growth is - go to competitors.</p></div>
+    <div class="callout blue" style="margin-bottom:24px">The #1 organic term is literally <b>"dr colorchip"</b> (8,100 searches/mo) - about <b>18% of all traffic by itself.</b> Non-brand terms like "paint chip repair kit" and "automotive paint chip repair" each drive well under 1%.</div>
+    <table class="tbl">
+      <tr><th>Brand</th><th>Organic keywords</th><th>Monthly visits</th></tr>
+      <tr class="us"><td>Dr. ColorChip</td><td>2,296</td><td>36,551</td></tr>
+      <tr><td>automotivetouchup.com</td><td><b>37,764</b></td><td><b>128,964</b></td></tr>
+      <tr><td>duplicolor.com</td><td>11,231</td><td>89,118</td></tr>
+      <tr><td>expresspaint.com</td><td>6,473</td><td>10,198</td></tr>
+    </table>
+    <p style="color:var(--muted);font-size:13.5px;margin-top:14px">Competitors rank for up to <b>16x more keywords</b> - almost entirely per-make/model/color pages. That's the exact long-tail we can auto-generate with an AI agent.</p>
+  </div>
+</section>
+
+<!-- SCALING THESIS -->
+<section>
+  <div class="wrap narrow">
+    <span class="eyebrow"><img src="assets/logo-car.png" alt="" /> The scaling thesis</span>
+    <h2 class="big" style="margin-top:16px">Trade a vanity conversion rate for real volume</h2>
+    <p style="font-size:17.5px;color:var(--ink-2);margin-top:14px">A high conversion rate on branded traffic is demand-<i>harvesting</i>. The growth story is demand-<i>creation</i>: paid ads + a site that converts cold traffic + a product for the mass market.</p>
+    <div class="callout" style="margin-top:22px;font-size:19px"><b>"I'd rather have a 3% conversion rate on $50,000/day than 11% on $3,000/day."</b><br><span style="font-size:15px">Today's business is healthy. The opportunity is to scale into paid demand - and the tailwind is real: with the economy tight, people are keeping their cars longer and fixing instead of repainting.</span></div>
+  </div>
+</section>
+
+<!-- THE COLOR FINDER -->
+<section class="tint">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><img src="assets/logo-car.png" alt="" /> The centerpiece</span><h2 class="big">A color finder that beats everyone</h2><p>This is the #1 feature. We build the best one in the industry - and it's live in the proposed redesign right now.</p></div>
+    <div class="grid3">
+      <div class="card"><h3>Type your code or make</h3><p>Start typing "Audi" or a code like "CVLM" and the exact color chip appears instantly. No drilling through menus.</p></div>
+      <div class="card"><h3>VIN &amp; plate lookup</h3><p>Paste your VIN and we find your vehicle automatically. <b>No competitor does this</b> - they tell you to "call your dealership."</p></div>
+      <div class="card"><h3>Real metallic &amp; pearl chips</h3><p>Our swatches actually shimmer and shift like real paint - generated from a color value, not flat squares. An industry first.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:30px"><a class="btn btn-blue btn-lg" href="./site/#finder" target="_blank" rel="noopener">Try the live color finder <span class="arrow">&rarr;</span></a></div>
+  </div>
+</section>
+
+<!-- PRODUCT EXPANSION -->
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><img src="assets/logo-car.png" alt="" /> Product &amp; revenue expansion</span><h2 class="big">More to sell, to more people</h2></div>
+    <div class="grid2">
+      <div class="card"><h3>A mass-market "Lite" line</h3><p>Today's product is for pros. Add a simple <b>pen + aerosol kit</b> anyone can use - the low-price front door for the huge everyday market (and the thing we advertise). Sourced through 20+ years of China manufacturing connections at strong margins.</p></div>
+      <div class="card"><h3>White-label the full range</h3><p>Carry everything competitors do (clearcoat, prep) and add the highest-attachment upsell: <b>ceramic coating</b> ("you fixed it, now protect it"), plus curb-rash and interior repair kits no competitor owns.</p></div>
+      <div class="card"><h3>The upsell engine</h3><p>One-click "add a second kit for your other car at 50% off," frequently-bought bundles, an accessories aisle, and subscriptions on consumables. Higher AOV is what makes paid ads profitable.</p></div>
+      <div class="card"><h3>Merch &amp; the sticker flywheel</h3><p>The logo is strong and car people wear their brands. A free die-cut sticker in every box turns customers into rolling billboards - the cheapest acquisition channel there is.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- AMAZON -->
+<section class="tint-blue">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><img src="assets/logo-car.png" alt="" /> Amazon</span><h2 class="big">A second demand engine, sitting idle</h2></div>
+    <div class="compare">
+      <div class="cc bad"><div class="h">Dr. ColorChip today</div><ul>
+        <li>No A+ content, no brand store, no video</li>
+        <li>Same generic image on every color listing</li>
+        <li>Roughly <b>one review</b> - for a 1M-customer brand</li>
+        <li>Not running meaningful sponsored ads</li>
+      </ul></div>
+      <div class="cc good"><div class="h">What "great" looks like (TouchUpDirect)</div><ul>
+        <li>Full A+ modules: "repair like a pro," 4-step process</li>
+        <li>Before/after panels + brand story</li>
+        <li><b>Hundreds</b> of photo reviews</li>
+        <li>Active Sponsored Products advertising</li>
+      </ul></div>
+    </div>
+    <div class="callout" style="margin-top:24px"><b>Every gap here is fixable</b> - and our color-chip engine auto-generates the per-color listing images too. Add A+ content, a review-generation flow, and ads, and Amazon becomes a major growth channel on its own.</div>
+  </div>
+</section>
+
+<!-- DEALER + SHOPIFY row -->
+<section>
+  <div class="wrap">
+    <div class="grid2">
+      <div class="card"><h3><span class="ic">B2B</span> The dealer opportunity</h3><p>Recruit people to <b>start their own paint-repair business</b> serving dealerships and drivers - a perfect fit for today's economy. There's already a dealer-recruitment video (from a major car show) to anchor a landing page, and automated outreach can reach every automotive business with a sample offer.</p></div>
+      <div class="card"><h3><span class="ic">Why</span> Move to Shopify</h3><p>Modern e-commerce runs on Shopify: faster, always up, better for SEO, and it feeds clean product data to the AI shopping tools people increasingly buy through. It integrates with everything and pays for itself in conversion and uptime. Running serious e-commerce on legacy WordPress is a liability, not a saving.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section class="tint">
+  <div class="wrap narrow">
+    <div class="sec-head"><span class="eyebrow"><img src="assets/logo-car.png" alt="" /> The plan</span><h2 class="big">How we get there</h2></div>
+    <div class="road">
+      <div class="step"><div class="n">1</div><div><h3>Rebuild on Shopify around the brand</h3><p>A modern, fast, high-converting site designed around the logo - with the "this is easy" message front and center.</p></div></div>
+      <div class="step"><div class="n">2</div><div><h3>Ship the industry-best color finder</h3><p>Type-ahead by make and code, VIN lookup, and real finish-aware color chips. Already built in the concept.</p></div></div>
+      <div class="step"><div class="n">3</div><div><h3>Launch the Lite line + expand the catalog</h3><p>Mass-market pen/aerosol kit, ceramic coating, accessories, and the upsell engine.</p></div></div>
+      <div class="step"><div class="n">4</div><div><h3>Fix Amazon</h3><p>A+ content, real per-color images, a review engine, and sponsored ads.</p></div></div>
+      <div class="step"><div class="n">5</div><div><h3>Turn on advertising + programmatic SEO</h3><p>Paid campaigns against the "fix, don't repaint" tailwind, and an AI agent that builds a page for every color of every make and model.</p></div></div>
+    </div>
+    <p style="color:var(--muted);font-size:13.5px;margin-top:18px;text-align:center">Production note: the redesign assumes a professional photo + video shoot and 3D product renders (vendors already in hand).</p>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="ctaband">
+  <div class="wrap">
+    <img src="assets/logo-full.png" alt="Dr. ColorChip" />
+    <h2>See the redesign for yourself</h2>
+    <p>The proposed site is live and interactive - try the color finder, the quiz, and the VIN lookup.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a class="btn btn-white btn-lg" href="./site/" target="_blank" rel="noopener">Open the proposed redesign <span class="arrow">&rarr;</span></a>
+      <a class="btn btn-lg" style="background:rgba(255,255,255,.14);color:#fff" href="https://drcolorchip.com" target="_blank" rel="noopener">Compare to current site</a>
+    </div>
+  </div>
+</section>
+
+<footer class="rpt">
+  <img src="assets/logo-full.png" alt="Dr. ColorChip" />
+  <p><b style="color:#fff">Dr. ColorChip</b> - Growth Strategy &amp; Website Redesign</p>
+  <p>Concept &amp; strategy proposal · Data via SEMrush · Redesign is a working concept mockup</p>
+</footer>
+
+</body>
+</html>

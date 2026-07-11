@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dr. ColorChip - Find Your Exact Car Color | Concept Mockup</title>
+<meta name="description" content="Find your car's exact factory paint color in seconds, get a matched kit, and fix that chip or scratch yourself. No body shop. No experience needed." />
+<meta name="theme-color" content="#0E1B2E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css?v=3" />
+</head>
+<body>
+
+<div class="announce"><div class="wrap">
+  <span><svg class="i"><use href="#i-shield"/></svg> Guaranteed Color Match</span>
+  <span><svg class="i"><use href="#i-spark"/></svg> So Easy Anyone Can Do It</span>
+  <span><svg class="i"><use href="#i-ship"/></svg> Free Shipping over $50</span>
+  <span><svg class="i"><use href="#i-star"/></svg> 1M+ Drivers Trust Us</span>
+</div></div>
+
+<header class="site"><div class="wrap">
+  <a href="#top" class="brand"><img src="assets/logo-car.png?v=3" alt="Dr. ColorChip" /></a>
+  <nav class="main">
+    <a href="#finder">Find Your Color</a>
+    <a href="#how">How It Works</a>
+    <a href="#shop">Shop Kits</a>
+    <a href="#accessories">Accessories</a>
+  </nav>
+  <div class="head-right">
+    <button class="btn btn-orange openquiz quiz-head"><svg class="i"><use href="#i-spark"/></svg> Take the Quiz</button>
+    <a href="#finder" class="btn btn-blue">Find My Color</a>
+    <a href="#shop" class="icon-btn" aria-label="Cart"><svg class="i"><use href="#i-cart"/></svg><span class="cart-count" id="cartCount" style="display:none">0</span></a>
+    <button class="menu-btn icon-btn" aria-label="Menu"><svg class="i"><use href="#i-search"/></svg></button>
+  </div>
+</div></header>
+
+<!-- HERO + FINDER -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-top">
+      <div class="hero-copy">
+        <span class="hero-badge"><span class="dot"></span> Fix it yourself in minutes - no body shop</span>
+        <h1>That scratch? <span class="hl">You can fix it.</span></h1>
+        <p class="sub">Find your car's exact factory color in seconds, get a perfectly matched kit, and make that chip or scratch disappear. You do <b>not</b> need to be a pro.</p>
+        <div class="hero-cta">
+          <a href="#finder" class="btn btn-orange btn-lg">Find my color</a>
+          <button class="btn btn-ghost btn-lg openquiz"><svg class="i"><use href="#i-spark"/></svg> Not sure? Take the quiz</button>
+        </div>
+        <div class="hero-social"><b>1,000,000+</b> drivers fixed their ride with us since 2003</div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+        <img class="hero-logo" src="assets/logo-full.png?v=3" alt="Dr. ColorChip" />
+        <span class="fc fc1"></span><span class="fc fc2"></span><span class="fc fc3"></span><span class="fc fc4"></span><span class="fc fc5"></span>
+      </div>
+    </div>
+
+    <div class="finder" id="finder">
+      <div class="finder-tabs">
+        <button class="ftab active" data-tab="search"><svg class="i"><use href="#i-palette"/></svg> Search by color or code</button>
+        <button class="ftab" data-tab="vin"><svg class="i"><use href="#i-vin"/></svg> Use my VIN</button>
+      </div>
+
+      <div id="panel-search">
+        <div class="searchbox">
+          <svg class="i"><use href="#i-search"/></svg>
+          <input id="q" type="text" autocomplete="off" placeholder="Type your make (Audi), color, or paint code (CVLM)..." />
+          <button class="btn btn-blue"><span>Find</span><svg class="i"><use href="#i-arrow"/></svg></button>
+        </div>
+        <div class="hint">Start typing - results appear instantly. Try <b>Audi</b>, <b>Tesla</b>, <b>Barcelona Red</b>, or a code like <b>CVLM</b>.</div>
+        <div class="chips-quick">
+          <button class="qchip" data-q="Audi">Audi</button>
+          <button class="qchip" data-q="Toyota">Toyota</button>
+          <button class="qchip" data-q="Ford">Ford</button>
+          <button class="qchip" data-q="Tesla">Tesla</button>
+          <button class="qchip" data-q="BMW">BMW</button>
+          <button class="qchip" data-q="CVLM">Code: CVLM</button>
+        </div>
+      </div>
+
+      <div id="panel-vin" style="display:none">
+        <div class="searchbox">
+          <svg class="i"><use href="#i-vin"/></svg>
+          <input id="vin" type="text" autocomplete="off" maxlength="17" placeholder="Paste your 17-character VIN..." />
+        </div>
+        <div class="vin-note"><svg class="i"><use href="#i-bolt"/></svg> <b>No paint code needed.</b>&nbsp;We read your VIN and pull up your vehicle automatically. <i>(TouchUpDirect can't do this.)</i></div>
+        <div class="vin-banner" id="vinBanner"></div>
+      </div>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="results-wrap" id="resultsSection" style="margin-top:26px">
+      <div class="results-meta" id="resultsMeta" style="display:none">
+        <div class="cnt" id="resCnt"></div>
+        <div style="font-size:13px;color:var(--muted)">Click a chip to add a custom-mixed kit</div>
+      </div>
+      <div class="results" id="results"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PICK YOUR LEVEL -->
+<section class="trust" id="shop">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow center">Two ways to fix it</span>
+      <h2>Pick your level</h2>
+      <p>New to this? Start with Lite. Detailer or perfectionist? Go Pro.</p>
+    </div>
+    <div class="prod-grid">
+      <div class="pcard lite">
+        <div class="ptop"><span class="tag">ColorChip Lite</span><span class="stars"><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg></span></div>
+        <div class="media"><svg class="i"><use href="#i-drop"/></svg></div>
+        <div class="pbody">
+          <h3>The Easy Pen &amp; Spray</h3>
+          <div class="price">$49.99 <small>the easy way</small></div>
+          <ul>
+            <li><svg class="i"><use href="#i-check"/></svg> Anyone can do it - zero experience needed</li>
+            <li><svg class="i"><use href="#i-check"/></svg> Precision pen + touch-up brush in one</li>
+            <li><svg class="i"><use href="#i-check"/></svg> Exact factory color match</li>
+            <li><svg class="i"><use href="#i-check"/></svg> Fixed in minutes, way better than the scratch</li>
+          </ul>
+          <a href="#finder" class="btn btn-orange">Find my color &amp; start</a>
+        </div>
+      </div>
+      <div class="pcard pro">
+        <div class="ptop"><span class="tag">ColorChip Pro</span><span class="stars"><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg></span></div>
+        <div class="media"><svg class="i"><use href="#i-wrench"/></svg></div>
+        <div class="pbody">
+          <h3>The Complete System</h3>
+          <div class="price">$59.99 <small>pro-grade results</small></div>
+          <ul>
+            <li><svg class="i"><use href="#i-check"/></svg> Squirt &amp; Squeegee + SealAct blending</li>
+            <li><svg class="i"><use href="#i-check"/></svg> Near-invisible, body-shop-quality finish</li>
+            <li><svg class="i"><use href="#i-check"/></svg> Built for detailers &amp; enthusiasts</li>
+            <li><svg class="i"><use href="#i-check"/></svg> Clearcoat, primer &amp; prep options</li>
+          </ul>
+          <a href="#finder" class="btn btn-blue">Find my color &amp; start</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS (anti-intimidation) -->
+<section id="how">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow center">It's easier than you think</span>
+      <h2>You don't need to be a pro</h2>
+      <p>Door dings, stone chips, scratches, bumper scrapes - four simple steps and it's gone.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Find your exact color</h3><p>Search your make, code, or VIN. We match your factory color, guaranteed.</p></div>
+      <div class="step"><div class="n">2</div><h3>Pick how you'll apply it</h3><p>Pen for chips, brush for scratches, aerosol for bigger spots. We recommend the right one.</p></div>
+      <div class="step"><div class="n">3</div><h3>Prep &amp; clearcoat</h3><p>Everything you need comes in the kit - no guessing, nothing extra to buy.</p></div>
+      <div class="step"><div class="n">4</div><h3>Fix it in minutes</h3><p>Follow the video, dab it on, blend, done. Better than that scratch every single time.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU CAN FIX -->
+<section class="soft-sec" id="fix">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow center">One brand, every kind of damage</span>
+      <h2>What can you fix?</h2>
+      <p>If it chipped, scratched, or scraped your paint, you can make it disappear.</p>
+    </div>
+    <div class="fixgrid">
+      <div class="fixcard"><div class="fi"><svg class="i"><use href="#i-drop"/></svg></div><h3>Stone &amp; rock chips</h3><p>Those little highway battle scars on your hood and bumper.</p></div>
+      <div class="fixcard"><div class="fi"><svg class="i"><use href="#i-wrench"/></svg></div><h3>Scratches &amp; key marks</h3><p>Parking-lot scratches and door-edge scuffs, gone.</p></div>
+      <div class="fixcard"><div class="fi"><svg class="i"><use href="#i-car"/></svg></div><h3>Door dings</h3><p>Shopping-cart taps and tight-garage scrapes.</p></div>
+      <div class="fixcard"><div class="fi"><svg class="i"><use href="#i-spark"/></svg></div><h3>Bumper scrapes</h3><p>Bigger scuffed areas - just step up to the aerosol.</p></div>
+    </div>
+    <div class="center-cta"><a href="#finder" class="btn btn-orange btn-lg">Find my color</a></div>
+  </div>
+</section>
+
+<!-- ACCESSORIES (impulse) -->
+<section id="accessories">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow center">Complete the job</span>
+      <h2>Everything you need, nothing you don't</h2>
+      <p>Grab these while you're here - the hard part (finding your color) is already done.</p>
+    </div>
+    <div class="acc-grid">
+      <div class="acc-card"><div class="acc-ic ai-1"><svg class="i"><use href="#i-shield"/></svg></div><div class="acc-body"><div class="nm">Ceramic Coating Kit</div><div class="mk">Protect the panel you just fixed</div><div class="acc-meta"><span class="price">$39.95</span><span class="tagx">Best add-on</span></div></div></div>
+      <div class="acc-card"><div class="acc-ic ai-2"><svg class="i"><use href="#i-drop"/></svg></div><div class="acc-body"><div class="nm">Clearcoat Finish</div><div class="mk">Seal &amp; gloss the repair</div><div class="acc-meta"><span class="price">$14.95</span><span class="tagx">Essential</span></div></div></div>
+      <div class="acc-card"><div class="acc-ic ai-3"><svg class="i"><use href="#i-spark"/></svg></div><div class="acc-body"><div class="nm">Prep Wipes (10-pk)</div><div class="mk">Clean before you paint</div><div class="acc-meta"><span class="price">$8.95</span><span class="tagx">Add-on</span></div></div></div>
+      <div class="acc-card"><div class="acc-ic ai-4"><svg class="i"><use href="#i-check"/></svg></div><div class="acc-body"><div class="nm">Microfiber 3-pack</div><div class="mk">Lint-free finishing towels</div><div class="acc-meta"><span class="price">$9.95</span><span class="tagx">Add-on</span></div></div></div>
+      <div class="acc-card"><div class="acc-ic ai-5"><svg class="i"><use href="#i-palette"/></svg></div><div class="acc-body"><div class="nm">Polishing Kit</div><div class="mk">Blend &amp; restore gloss</div><div class="acc-meta"><span class="price">$24.95</span><span class="tagx">Popular</span></div></div></div>
+      <div class="acc-card"><div class="acc-ic ai-6"><svg class="i"><use href="#i-car"/></svg></div><div class="acc-body"><div class="nm">Curb-Rash Wheel Kit</div><div class="mk">Fix scraped rims too</div><div class="acc-meta"><span class="price">$34.95</span><span class="tagx">New</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTS -->
+<section id="experts">
+  <div class="wrap">
+    <div class="split-ex">
+      <div class="ex-copy">
+        <span class="eyebrow">Why Dr. ColorChip</span>
+        <h2>The paint-repair experts since 2003</h2>
+        <p>We don't dabble. For over 20 years we've done one thing and done it right: factory-matched paint repair anyone can do at home - earning the trust of a million-plus drivers and a nationwide dealer network along the way.</p>
+        <ul class="ex-list">
+          <li><svg class="i"><use href="#i-check"/></svg><div><b>1,000,000+ drivers</b> have restored their ride with us.</div></li>
+          <li><svg class="i"><use href="#i-check"/></svg><div><b>5,000-dealer network</b> of pros who rely on our color match.</div></li>
+          <li><svg class="i"><use href="#i-check"/></svg><div><b>Every make &amp; model</b> - foreign, domestic, classic, and brand-new.</div></li>
+          <li><svg class="i"><use href="#i-check"/></svg><div><b>Guaranteed match</b>, custom-mixed to your exact factory code.</div></li>
+        </ul>
+        <a href="#finder" class="btn btn-blue btn-lg">Find your color</a>
+      </div>
+      <div class="ex-media">
+        <img src="assets/team.jpg?v=3" alt="The Dr. ColorChip team" />
+        <div class="ex-badge"><b>20+ yrs</b><span>doing one thing right</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEALER / START YOUR OWN BUSINESS -->
+<section class="dealer" id="dealer">
+  <div class="wrap">
+    <div class="dealer-inner">
+      <div class="dealer-copy">
+        <span class="eyebrow light">A new income opportunity</span>
+        <h2>Start your own paint-repair business</h2>
+        <p>Money's tight and people are keeping their cars longer - so demand for affordable paint repair is booming. Turn that into income. Serve local dealerships and everyday drivers with a proven brand, real products, and full training behind you.</p>
+        <div class="dealer-points">
+          <div class="dp"><svg class="i"><use href="#i-bolt"/></svg><div><b>Low startup</b><span>Start small, scale up</span></div></div>
+          <div class="dp"><svg class="i"><use href="#i-star"/></svg><div><b>Proven brand</b><span>1M+ customers since 2003</span></div></div>
+          <div class="dp"><svg class="i"><use href="#i-ship"/></svg><div><b>We supply it all</b><span>Products, training, support</span></div></div>
+        </div>
+        <a href="https://www.youtube.com/watch?v=C43wX1gqfXA" target="_blank" rel="noopener" class="btn btn-orange btn-lg">Explore the dealer program</a>
+        <p class="dealer-note">Watch how our dealers build recurring income serving dealerships and drivers.</p>
+      </div>
+      <a class="dealer-media" href="https://www.youtube.com/watch?v=C43wX1gqfXA" target="_blank" rel="noopener" aria-label="Watch the dealer opportunity video">
+        <img src="https://img.youtube.com/vi/C43wX1gqfXA/hqdefault.jpg" alt="Start your own paint-repair business" />
+        <span class="dplay"></span>
+        <span class="dealer-badge">Watch the dealer story</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="trust">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow center">From our customers</span>
+      <h2>Perfect match, every time</h2>
+    </div>
+    <div class="tgrid">
+      <div class="review"><div class="stars"><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg></div><p>"I was nervous I'd mess it up. Took five minutes and you can't even tell where the chip was."</p><div class="who"><span class="av">JS</span><div><b>Joe S.</b><small>Verified Buyer</small></div></div></div>
+      <div class="review"><div class="stars"><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg></div><p>"Typed my VIN, it found my exact Tesla color instantly. Spot-on match. So much easier than the other guys."</p><div class="who"><span class="av">MB</span><div><b>Mike B.</b><small>Richmond, VA</small></div></div></div>
+      <div class="review"><div class="stars"><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg></div><p>"The color chip on screen matched my car perfectly, so I knew before I ordered. Bought one for my wife's car too."</p><div class="who"><span class="av">DT</span><div><b>David T.</b><small>Verified Buyer</small></div></div></div>
+    </div>
+    <div class="bignum">
+      <div><div class="v">1M+</div><div class="l">Drivers trust us</div></div>
+      <div><div class="v">4.8★</div><div class="l">Avg. rating</div></div>
+      <div><div class="v">20+ yrs</div><div class="l">Since 2003</div></div>
+      <div><div class="v">100%</div><div class="l">Match guarantee</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="soft-sec" id="faq">
+  <div class="wrap" style="max-width:840px">
+    <div class="section-head">
+      <span class="eyebrow center">Good questions</span>
+      <h2>Everything you're wondering</h2>
+    </div>
+    <div class="faq">
+      <details><summary>How do I find my paint color code?<svg class="i"><use href="#i-arrow"/></svg></summary><div>It's a short code (2-6 characters) usually on a sticker in your driver's door jamb, under the hood, or in the trunk. Or just paste your VIN into the finder above and we'll pull it up for you - no code hunting required.</div></details>
+      <details><summary>Will it really match my car?<svg class="i"><use href="#i-arrow"/></svg></summary><div>Yes. Every kit is custom-mixed to your exact factory code and backed by our color-match guarantee. If it doesn't match, we make it right.</div></details>
+      <details><summary>What about metallic, pearl, or tri-coat colors?<svg class="i"><use href="#i-arrow"/></svg></summary><div>We match those too. Our on-screen chips even show the metallic sparkle and pearl shift, so you know exactly what you're getting before you order.</div></details>
+      <details><summary>I've never done this before - is it hard?<svg class="i"><use href="#i-arrow"/></svg></summary><div>Not at all. The Lite pen-and-spray kit is built for total beginners: find your color, dab it on, blend, done in minutes. Follow the quick video and you're set.</div></details>
+      <details><summary>What if I can't find my exact color?<svg class="i"><use href="#i-arrow"/></svg></summary><div>No problem - choose "help me match it" and one of our color experts will personally match it for you. Nobody gets stuck.</div></details>
+      <details><summary>How fast do I get it, and what if I'm not happy?<svg class="i"><use href="#i-arrow"/></svg></summary><div>Fast turnaround with free shipping over $50, all backed by our satisfaction and color-match guarantee.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Your color is 10 seconds away.</h2>
+    <p>Type your make, your paint code, or your VIN - and watch your exact color appear.</p>
+    <a href="#finder" class="btn btn-orange btn-lg">Find my color now</a>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="brand-f"><img src="assets/logo-full.png?v=3" alt="Dr. ColorChip" /></a>
+        <p class="blurb">Professional-grade paint chip &amp; scratch repair you can do yourself. Factory-matched, made in the USA, trusted since 2003.</p>
+      </div>
+      <div><h4>Shop</h4><ul><li><a href="#shop">ColorChip Lite</a></li><li><a href="#shop">ColorChip Pro</a></li><li><a href="#accessories">Accessories</a></li><li><a href="#finder">Find My Color</a></li></ul></div>
+      <div><h4>Learn</h4><ul><li><a href="#how">How It Works</a></li><li><a href="#">Video Tutorials</a></li><li><a href="#">FAQ</a></li><li><a href="#">Find Your Paint Code</a></li></ul></div>
+      <div><h4>Help</h4><ul><li><a href="#">Contact Us</a></li><li><a href="#">Color Match Guarantee</a></li><li><a href="#">Shipping &amp; Returns</a></li><li><a href="#">Commercial / Pro</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span><span class="demo-flag">Concept Mockup</span> &nbsp; Sample color data for demonstration. Live site connects to the full factory-color database.</span>
+      <span>© 2026 Dr. ColorChip · Restore Your Ride</span>
+    </div>
+  </div>
+</footer>
+
+<!-- selected color / cart-attach demo -->
+<div class="pick" id="pick">
+  <span class="close" id="pkClose">×</span>
+  <div class="top">
+    <div class="sw" id="pkSw" data-base="sw"></div>
+    <div><div class="nm" id="pkName">Color</div><div class="mk" id="pkMake"></div></div>
+  </div>
+  <div class="row"><span class="k">Custom-mixed kit</span><span class="v">Dr. ColorChip Kit</span></div>
+  <div class="row"><span class="k">Paint code attached</span><span class="v" id="pkCode">-</span></div>
+  <button class="btn btn-orange" id="pkAdd">Add to Cart</button>
+  <div class="attach">The code rides on the order as a line-item property - it prints on the packing slip so it's mixed correctly.</div>
+</div>
+
+<div class="toast" id="toast"><svg class="i"><use href="#i-check"/></svg><span class="msg"></span></div>
+
+<!-- QUIZ -->
+<div class="modal-overlay" id="quizModal" aria-hidden="true">
+  <div class="quiz" role="dialog" aria-modal="true">
+    <button class="qx" id="quizClose" aria-label="Close">&times;</button>
+    <div class="quiz-inner" id="quizInner"></div>
+  </div>
+</div>
+
+<script src="assets/app.js?v=3"></script>
+</body>
+</html>

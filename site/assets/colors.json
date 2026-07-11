@@ -1,0 +1,63 @@
+[
+  {"make":"Audi","name":"Ibis White","code":"LY9C","finish":"solid","hex":"#EDEDE8","years":"2010-2025"},
+  {"make":"Audi","name":"Glacier White Metallic","code":"LX7R","finish":"metallic","hex":"#E6E8EA","years":"2012-2025"},
+  {"make":"Audi","name":"Mythos Black Metallic","code":"LY9T","finish":"metallic","hex":"#191A1D","years":"2016-2025"},
+  {"make":"Audi","name":"Nardo Gray","code":"LY7C","finish":"solid","hex":"#8E9291","years":"2014-2025"},
+  {"make":"Audi","name":"Tango Red Metallic","code":"LY3T","finish":"metallic","hex":"#A5140F","years":"2013-2022"},
+  {"make":"Audi","name":"Navarra Blue Metallic","code":"LX5J","finish":"metallic","hex":"#1E3A5F","years":"2016-2025"},
+  {"make":"Audi","name":"Daytona Gray Pearl","code":"LZ7G","finish":"pearl","hex":"#5B5E60","years":"2015-2025"},
+
+  {"make":"Buick","name":"Cinnabar Metallic","code":"CVLM","finish":"metallic","hex":"#7A2E22","years":"2018-2024"},
+  {"make":"Buick","name":"Ebony Twilight Metallic","code":"GB8","finish":"metallic","hex":"#232427","years":"2016-2024"},
+  {"make":"Buick","name":"Quicksilver Metallic","code":"GAN","finish":"metallic","hex":"#C7CACB","years":"2014-2024"},
+  {"make":"Buick","name":"Summit White","code":"GAZ","finish":"solid","hex":"#F1F1EE","years":"2010-2024"},
+
+  {"make":"Toyota","name":"Super White","code":"040","finish":"solid","hex":"#F7F7F4","years":"1990-2020"},
+  {"make":"Toyota","name":"Blizzard Pearl","code":"070","finish":"pearl","hex":"#F0F0EC","years":"2008-2025"},
+  {"make":"Toyota","name":"Barcelona Red Metallic","code":"3R3","finish":"metallic","hex":"#7C1518","years":"2009-2020"},
+  {"make":"Toyota","name":"Celestial Silver Metallic","code":"1J9","finish":"metallic","hex":"#A7ABB0","years":"2014-2025"},
+  {"make":"Toyota","name":"Midnight Black Metallic","code":"218","finish":"metallic","hex":"#16171A","years":"2013-2025"},
+  {"make":"Toyota","name":"Blue Crush Metallic","code":"8W7","finish":"metallic","hex":"#2E5E86","years":"2016-2024"},
+
+  {"make":"Honda","name":"Modern Steel Metallic","code":"NH797M","finish":"metallic","hex":"#55585C","years":"2013-2024"},
+  {"make":"Honda","name":"Crystal Black Pearl","code":"NH731P","finish":"pearl","hex":"#0E0F12","years":"2008-2025"},
+  {"make":"Honda","name":"Rallye Red","code":"R513","finish":"solid","hex":"#B0121A","years":"2012-2024"},
+  {"make":"Honda","name":"Lunar Silver Metallic","code":"NH830M","finish":"metallic","hex":"#B4B7BA","years":"2013-2024"},
+  {"make":"Honda","name":"Aegean Blue Metallic","code":"B621M","finish":"metallic","hex":"#2A4A73","years":"2021-2025"},
+
+  {"make":"Ford","name":"Oxford White","code":"YZ","finish":"solid","hex":"#F3F3EF","years":"2000-2025"},
+  {"make":"Ford","name":"Race Red","code":"PQ","finish":"solid","hex":"#C1121C","years":"2011-2024"},
+  {"make":"Ford","name":"Magnetic Metallic","code":"J7","finish":"metallic","hex":"#6A6D70","years":"2015-2024"},
+  {"make":"Ford","name":"Velocity Blue","code":"AE","finish":"metallic","hex":"#1C4E9C","years":"2018-2024"},
+  {"make":"Ford","name":"Agate Black","code":"UM","finish":"metallic","hex":"#141519","years":"2013-2025"},
+
+  {"make":"Chevrolet","name":"Summit White","code":"GAZ","finish":"solid","hex":"#F1F1EE","years":"2005-2025"},
+  {"make":"Chevrolet","name":"Black","code":"GBA","finish":"solid","hex":"#131417","years":"2005-2025"},
+  {"make":"Chevrolet","name":"Red Hot","code":"GCS","finish":"solid","hex":"#C21A1A","years":"2013-2024"},
+  {"make":"Chevrolet","name":"Silver Ice Metallic","code":"GAN","finish":"metallic","hex":"#C7CACB","years":"2011-2024"},
+  {"make":"Chevrolet","name":"Cajun Red Tintcoat","code":"G7C","finish":"tricoat","hex":"#6E1512","years":"2012-2024"},
+
+  {"make":"BMW","name":"Alpine White","code":"300","finish":"solid","hex":"#F0F1EC","years":"2000-2025"},
+  {"make":"BMW","name":"Jet Black","code":"668","finish":"solid","hex":"#0C0D0F","years":"2000-2025"},
+  {"make":"BMW","name":"Mineral Grey Metallic","code":"B39","finish":"metallic","hex":"#6B6E71","years":"2011-2024"},
+  {"make":"BMW","name":"Estoril Blue Metallic","code":"B45","finish":"metallic","hex":"#2F5FA6","years":"2013-2024"},
+  {"make":"BMW","name":"Melbourne Red Metallic","code":"A75","finish":"metallic","hex":"#7A1A20","years":"2010-2022"},
+
+  {"make":"Nissan","name":"Glacier White","code":"QAB","finish":"solid","hex":"#EFEFEA","years":"2010-2025"},
+  {"make":"Nissan","name":"Super Black","code":"KH3","finish":"solid","hex":"#121316","years":"2005-2025"},
+  {"make":"Nissan","name":"Gun Metallic","code":"KAD","finish":"metallic","hex":"#6E7175","years":"2010-2025"},
+  {"make":"Nissan","name":"Scarlet Ember Tintcoat","code":"NBL","finish":"tricoat","hex":"#9A1B1E","years":"2016-2024"},
+
+  {"make":"Jeep","name":"Firecracker Red","code":"PRC","finish":"solid","hex":"#C41E20","years":"2013-2024"},
+  {"make":"Jeep","name":"Bright White","code":"PW7","finish":"solid","hex":"#F4F4F0","years":"2011-2025"},
+  {"make":"Jeep","name":"Granite Crystal Metallic","code":"PDN","finish":"metallic","hex":"#57595C","years":"2013-2025"},
+
+  {"make":"Tesla","name":"Pearl White Multi-Coat","code":"PPSW","finish":"pearl","hex":"#F2F2F0","years":"2016-2025"},
+  {"make":"Tesla","name":"Solid Black","code":"PBSB","finish":"solid","hex":"#121317","years":"2012-2024"},
+  {"make":"Tesla","name":"Red Multi-Coat","code":"PPMR","finish":"tricoat","hex":"#8C0E12","years":"2016-2025"},
+  {"make":"Tesla","name":"Deep Blue Metallic","code":"PPSB","finish":"metallic","hex":"#1B3A6B","years":"2012-2025"},
+  {"make":"Tesla","name":"Midnight Silver Metallic","code":"PMNG","finish":"metallic","hex":"#4A4D50","years":"2016-2025"},
+
+  {"make":"Harley-Davidson","name":"Vivid Black","code":"HD-VB","finish":"solid","hex":"#0C0D0F","years":"2000-2025"},
+  {"make":"Harley-Davidson","name":"Billiard Red","code":"HD-BR","finish":"metallic","hex":"#7E1C1C","years":"2016-2024"}
+]
