@@ -397,3 +397,9 @@ footer a:hover{color:#fff}
 .dealer-media:hover .dplay{transform:scale(1.07)}
 .dealer-badge{position:absolute;left:14px;bottom:14px;background:rgba(14,27,46,.82);color:#fff;font-weight:700;font-size:12.5px;padding:6px 12px;border-radius:100px}
 @media(max-width:900px){.dealer-inner{grid-template-columns:1fr;gap:26px}.dealer-media{order:-1}}
+
+/* real product/damage imagery (replacing icon placeholders) */
+.media.has-img{background:#fff;display:flex;align-items:center;justify-content:center;padding:8px;overflow:hidden}
+.media.has-img img{max-height:100%;max-width:92%;object-fit:contain}
+.fix-img{height:140px;border-radius:14px;background-size:cover;background-position:center;margin-bottom:14px}
+.acc-img{width:60px;height:60px;flex-shrink:0;border-radius:12px;background-size:cover;background-position:center;box-shadow:inset 0 0 0 1px rgba(16,40,80,.08)}
