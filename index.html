@@ -70,9 +70,9 @@ header.rpt .sp{margin-left:auto}
 /* stat cards */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 .stat{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
-.stat .v{font-family:Sora;font-weight:800;font-size:32px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
+.stat .v{font-family:Sora;font-weight:800;font-size:32px;color:var(--blue-deep);line-height:1}
 .stat .l{font-size:13.5px;color:var(--muted);margin-top:8px;font-weight:600}
-.stat.hot .v{background:var(--grad-hot);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat.hot .v{color:var(--orange);background:none}
 
 /* generic cards */
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
@@ -124,11 +124,11 @@ ul.clean li b{color:var(--ink)}
 .ctaband h2{color:#fff;font-size:clamp(26px,3.8vw,40px);font-weight:800}
 .ctaband p{color:#dbe8fb;font-size:17px;margin:12px 0 26px}
 .ctaband .btn-white{background:#fff;color:var(--blue-deep)}
-.ctaband img{height:60px;margin:0 auto 20px;display:block;filter:brightness(0) invert(1);opacity:.95}
+.ctaband img{height:80px;margin:0 auto 18px;display:block;filter:drop-shadow(0 10px 22px rgba(0,0,0,.25))}
 
 /* footer */
 footer.rpt{background:#0e1b2e;color:#9fb0c9;padding:40px 0;text-align:center;font-size:13.5px}
-footer.rpt img{height:44px;background:#fff;border-radius:10px;padding:7px 12px;margin-bottom:14px}
+footer.rpt img{height:56px;margin-bottom:14px}
 footer.rpt p{margin:6px 0}
 
 @media(max-width:860px){.stats{grid-template-columns:1fr 1fr}.grid2,.grid3,.compare{grid-template-columns:1fr}}
@@ -147,7 +147,7 @@ footer.rpt p{margin:6px 0}
   <div class="wrap">
     <img class="coverlogo" src="assets/logo-full.png" alt="Dr. ColorChip" />
     <h1>A brand this strong should be <span class="hl">dominating.</span></h1>
-    <p class="lede">Dr. ColorChip has a million-plus customers, a trusted name since 2003, and a great product. But the website, the SEO, and Amazon are leaving enormous money on the table. Here's the opportunity - and exactly how we capture it.</p>
+    <p class="lede">You have a million-plus customers, a trusted name since 2003, and a genuinely great product. But your website, your SEO, and your Amazon presence are leaving real money on the table. Here's the opportunity - and exactly how we capture it together.</p>
     <div class="cta">
       <a class="btn btn-ghost btn-lg" href="https://drcolorchip.com" target="_blank" rel="noopener">Current website</a>
       <a class="btn btn-orange btn-lg" href="./site/" target="_blank" rel="noopener">See the proposed redesign <span class="arrow">&rarr;</span></a>
@@ -162,7 +162,7 @@ footer.rpt p{margin:6px 0}
     <span class="eyebrow"><img src="assets/logo-car.png" alt="" /> The opportunity</span>
     <h2 class="big" style="margin-top:16px">It's a gold mine hiding behind old execution</h2>
     <p style="font-size:18px;color:var(--ink-2);margin-top:14px">The demand already exists and the brand equity is already built. Nothing here requires inventing a market - it requires modern execution. Fixing the direct-to-consumer and retail experience (website + Amazon) alone could realistically <b>2-3x sales</b>.</p>
-    <div class="callout" style="margin-top:24px"><b>The whole thesis in one line:</b> Dr. ColorChip is winning small on a great brand. Modernize the site, add a mass-market product, fix Amazon, and turn on advertising - and the ceiling is many times today's business.</div>
+    <div class="callout" style="margin-top:24px"><b>The whole thesis in one line:</b> you're winning small on a great brand. Modernize the site, add a mass-market product, fix Amazon, and turn on advertising - and the ceiling is many times today's business.</div>
   </div>
 </section>
 
@@ -173,7 +173,7 @@ footer.rpt p{margin:6px 0}
     <div class="stats">
       <div class="stat"><div class="v">1M+</div><div class="l">Customers since 2003</div></div>
       <div class="stat"><div class="v">36,551</div><div class="l">Monthly organic visits</div></div>
-      <div class="stat hot"><div class="v">~80%</div><div class="l">Of traffic is their own brand name</div></div>
+      <div class="stat hot"><div class="v">~80%</div><div class="l">Of your traffic is your own brand name</div></div>
       <div class="stat hot"><div class="v">11</div><div class="l">Paid keywords (ads basically off)</div></div>
     </div>
     <p style="text-align:center;color:var(--muted);font-size:13.5px;margin-top:16px">Source: SEMrush, drcolorchip.com (US). 2,296 organic keywords · ~$15,771/mo in organic traffic value.</p>
@@ -183,7 +183,7 @@ footer.rpt p{margin:6px 0}
 <!-- THE AUDIT -->
 <section>
   <div class="wrap">
-    <div class="sec-head"><span class="eyebrow"><img src="assets/logo-car.png" alt="" /> The honest audit</span><h2 class="big">The best feature is the weakest execution</h2></div>
+    <div class="sec-head"><span class="eyebrow"><img src="assets/logo-car.png" alt="" /> The honest audit</span><h2 class="big">Your best feature is your weakest execution</h2></div>
     <div class="grid3">
       <div class="card"><h3><span class="ic hot">1</span> The color finder fails</h3><p>Their #1 feature - and the #1 customer pain point - is a text-only list with locked dropdowns and <b>no color chip at all.</b> Of nine competitors we studied, it's the only one showing no visual swatch.</p></div>
       <div class="card"><h3><span class="ic hot">2</span> A dated site</h3><p>A tired ~2018-era WordPress build with years of accumulated cruft, no modern speed, and no premium feel. Functional, but nothing about it says "trusted leader."</p></div>
@@ -195,7 +195,7 @@ footer.rpt p{margin:6px 0}
 <!-- SEO REALITY -->
 <section class="tint-blue">
   <div class="wrap">
-    <div class="sec-head"><span class="eyebrow"><img src="assets/logo-car.png" alt="" /> The SEO reality</span><h2 class="big">Harvesting the brand, not winning the category</h2><p>Live SEMrush data confirms it: almost all organic traffic is people typing the brand name. The category and long-tail terms - where the growth is - go to competitors.</p></div>
+    <div class="sec-head"><span class="eyebrow"><img src="assets/logo-car.png" alt="" /> The SEO reality</span><h2 class="big">You're harvesting your brand, not winning the category</h2><p>Live SEMrush data confirms it: almost all of your organic traffic is people typing your brand name. The category and long-tail terms - where the growth is - are going to competitors.</p></div>
     <div class="callout blue" style="margin-bottom:24px">The #1 organic term is literally <b>"dr colorchip"</b> (8,100 searches/mo) - about <b>18% of all traffic by itself.</b> Non-brand terms like "paint chip repair kit" and "automotive paint chip repair" each drive well under 1%.</div>
     <table class="tbl">
       <tr><th>Brand</th><th>Organic keywords</th><th>Monthly visits</th></tr>
@@ -211,7 +211,7 @@ footer.rpt p{margin:6px 0}
 <!-- MARKET SIZE -->
 <section>
   <div class="wrap">
-    <div class="sec-head"><span class="eyebrow"><img src="assets/logo-car.png" alt="" /> The market they're missing</span><h2 class="big">Nearly 60,000 searches a month they barely show up for</h2><p>Real, in-market demand for exactly what Dr. ColorChip sells - and they rank on page one for almost none of it. (US monthly search volume, SEMrush.)</p></div>
+    <div class="sec-head"><span class="eyebrow"><img src="assets/logo-car.png" alt="" /> The market they're missing</span><h2 class="big">Nearly 60,000 searches a month you barely show up for</h2><p>Real, in-market demand for exactly what you sell - and you rank on page one for almost none of it. (US monthly search volume, SEMrush.)</p></div>
     <table class="tbl">
       <tr><th>Category search term</th><th>Monthly searches</th><th>Advertiser CPC</th></tr>
       <tr><td>ceramic coating for cars</td><td><b>14,800</b></td><td>$2.35</td></tr>
@@ -231,7 +231,7 @@ footer.rpt p{margin:6px 0}
 <!-- AUTHORITY + PAID -->
 <section class="tint">
   <div class="wrap">
-    <div class="sec-head"><span class="eyebrow"><img src="assets/logo-car.png" alt="" /> Authority &amp; ad spend</span><h2 class="big">A strong foundation, pointed the wrong way</h2></div>
+    <div class="sec-head"><span class="eyebrow"><img src="assets/logo-car.png" alt="" /> Authority &amp; ad spend</span><h2 class="big">Your foundation is strong - it's just pointed the wrong way</h2></div>
     <div class="stats" style="margin-bottom:26px">
       <div class="stat"><div class="v">37</div><div class="l">Authority Score (solid)</div></div>
       <div class="stat"><div class="v">6,210</div><div class="l">Backlinks</div></div>
@@ -239,8 +239,8 @@ footer.rpt p{margin:6px 0}
       <div class="stat"><div class="v">93</div><div class="l">Keywords ranked #1 (nearly all brand)</div></div>
     </div>
     <div class="grid2">
-      <div class="callout"><b>Their ad spend is defensive.</b> The paid keywords are their own name - "dr colorchip," "drcolorchip reviews," "drcolorchip coupon." They're paying to catch people already looking for them, not to win new customers from the category.</div>
-      <div class="callout blue"><b>They rank #1 for almost everything they rank for</b> - because it's their brand. Of their top 120 keywords, 111 sit in the top 3. The authority is already there; it's just never been aimed at the category or the long tail.</div>
+      <div class="callout"><b>Your ad spend is defensive.</b> The paid keywords are their own name - "dr colorchip," "drcolorchip reviews," "drcolorchip coupon." They're paying to catch people already looking for them, not to win new customers from the category.</div>
+      <div class="callout blue"><b>You rank #1 for almost everything you rank for</b> - because it's your brand. Of their top 120 keywords, 111 sit in the top 3. The authority is already there; it's just never been aimed at the category or the long tail.</div>
     </div>
 
     <div style="margin-top:34px">
@@ -328,9 +328,10 @@ footer.rpt p{margin:6px 0}
 <section>
   <div class="wrap">
     <div class="grid2">
-      <div class="card"><h3><span class="ic">B2B</span> The dealer opportunity</h3><p>Recruit people to <b>start their own paint-repair business</b> serving dealerships and drivers - a perfect fit for today's economy. There's already a dealer-recruitment video (from a major car show) to anchor a landing page, and automated outreach can reach every automotive business with a sample offer.</p></div>
+      <div class="card"><h3><span class="ic">B2B</span> Own the "be your own boss" market</h3><p>You already have what competitors can only dream of: <b>professional, TV-featured videos on how to make money with this - with millions of views.</b> That content anchors a dedicated <b>dealer-program page</b> ("Be your own boss - start a paint-repair business today"), and we can <b>advertise on those very videos</b> to funnel motivated viewers straight into it. With that reach and credibility, this is a category you can dominate.</p></div>
       <div class="card"><h3><span class="ic">Why</span> Move to Shopify</h3><p>Modern e-commerce runs on Shopify: faster, always up, better for SEO, and it feeds clean product data to the AI shopping tools people increasingly buy through. It integrates with everything and pays for itself in conversion and uptime. Running serious e-commerce on legacy WordPress is a liability, not a saving.</p></div>
     </div>
+    <div class="callout blue" style="margin-top:22px"><b>Build a B2B engine, not just a dealer page.</b> The new site should speak to <b>three people at once</b>, each with a clear path: (1) the everyday driver who just wants a pen to hide a bumper chip, (2) the confident car-guy, detailer, or mechanic doing it right - or doing it for a customer, and (3) the person ready to build a business out of it. Many of your customers are already in or near the trade, so opening that third door - with the "start your own business" videos and a dealer/wholesale funnel - lets you sell far more than one-off kits.</div>
   </div>
 </section>
 
@@ -384,7 +385,7 @@ footer.rpt p{margin:6px 0}
   <div class="wrap">
     <div class="sec-head"><span class="eyebrow"><img src="assets/logo-car.png" alt="" /> The long-term view</span><h2 class="big">A long-term flywheel, not a quick fix</h2><p>This isn't a weekend project - it's a build-and-optimize partnership. And the good news is the hardest, most expensive parts are already done.</p></div>
     <div class="grid3">
-      <div class="card"><h3>The hard part is behind them</h3><p>A trusted 20-year brand, a proven product, a dealer network, and the operational infrastructure are already in place. The heavy lifting and investment are made. What's left is optimization - the highest-return work there is.</p></div>
+      <div class="card"><h3>The hard part is behind you</h3><p>Your trusted 20-year brand, proven product, dealer network, and operational infrastructure are already in place. The heavy lifting and investment are made. What's left is optimization - the highest-return work there is.</p></div>
       <div class="card"><h3>Build the flywheel</h3><p>A modern funnel that acquires new customers from the category, converts them, upsells them, then keeps spinning - plus re-engaging the huge base of past customers with email/SMS, subscriptions, and new products like ceramic coating.</p></div>
       <div class="card"><h3>Reach new-car owners</h3><p>New-vehicle owners are the perfect audience: a chip is inevitable, and lease-holders especially want to avoid wear-and-tear fees. We can target recent buyers and put a kit in their hands before they even need it.</p></div>
     </div>
@@ -395,7 +396,7 @@ footer.rpt p{margin:6px 0}
 <!-- FINAL CTA -->
 <section class="ctaband">
   <div class="wrap">
-    <img src="assets/logo-full.png" alt="Dr. ColorChip" />
+    <img src="assets/logo-car.png" alt="Dr. ColorChip" />
     <h2>See the redesign for yourself</h2>
     <p>The proposed site is live and interactive - try the color finder, the quiz, and the VIN lookup.</p>
     <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
@@ -406,7 +407,7 @@ footer.rpt p{margin:6px 0}
 </section>
 
 <footer class="rpt">
-  <img src="assets/logo-full.png" alt="Dr. ColorChip" />
+  <img src="assets/logo-car.png" alt="Dr. ColorChip" />
   <p><b style="color:#fff">Dr. ColorChip</b> - Growth Strategy &amp; Website Redesign</p>
   <p>Concept &amp; strategy proposal · Data via SEMrush · Redesign is a working concept mockup</p>
 </footer>
