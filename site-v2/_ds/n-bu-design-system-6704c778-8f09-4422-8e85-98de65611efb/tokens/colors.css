@@ -1,0 +1,77 @@
+/* ------------------------------------------------------------------
+   Nēbu · Color tokens
+   A deep-wine + gold luxury palette drawn from the live storefront
+   (slideshow + compare-diffusers sections, 2026 redesign) and the
+   brand logo. Wine #78000b is the anchor; warm golds, cream and blush
+   surfaces give the editorial, high-end feel.
+------------------------------------------------------------------ */
+
+:root {
+  /* ---- Brand: wine ------------------------------------------------ */
+  --nb-wine:        #78000b;  /* primary brand — logo, buttons, footer */
+  --nb-wine-dark:   #4e0314;  /* hover / deep panels                   */
+  --nb-wine-soft:   #9a2230;  /* tints, links on light                 */
+
+  /* ---- Heritage: rust (legacy theme primary) --------------------- */
+  --nb-rust:        #782c02;  /* warm umber — heritage accent          */
+  --nb-rust-dark:   #642401;
+
+  /* ---- Gold / champagne ------------------------------------------ */
+  --nb-gold:        #b7813b;  /* signature accent rule & active states */
+  --nb-gold-soft:   #f5d8a0;  /* soft gold — italic emphasis on dark   */
+  --nb-champagne:   #c99a5c;  /* lighter gold — links, hovers          */
+  --nb-amber:       #e09938;  /* sale / cart highlight                 */
+
+  /* ---- Ink & neutrals -------------------------------------------- */
+  --nb-ink:         #030303;  /* headings                              */
+  --nb-espresso:    #262613;  /* body text — warm near-black olive     */
+  --nb-stone:       #595959;  /* secondary text                        */
+  --nb-fog:         #909090;  /* muted / meta text                     */
+  --nb-line:        #ececec;  /* hairline borders                      */
+  --nb-mist:        #f4f4f4;  /* subtle fill                           */
+
+  /* ---- Warm surfaces --------------------------------------------- */
+  --nb-white:       #ffffff;
+  --nb-cream:       #f4f1eb;  /* warm cream section background          */
+  --nb-blush:       #fff7f7;  /* faint wine-tinted panel                */
+
+  /* ---- Functional ------------------------------------------------- */
+  --nb-success:     #407c5d;
+  --nb-error:       #e32c2b;
+  --nb-info:        #2a5f8f;
+
+  /* ================================================================
+     Semantic aliases — prefer these in component & UI-kit code
+  ================================================================ */
+  --brand:              var(--nb-wine);
+  --brand-hover:        var(--nb-wine-dark);
+  --brand-contrast:     #ffffff;
+  --accent:             var(--nb-gold);
+  --accent-soft:        var(--nb-gold-soft);
+
+  --surface-page:       var(--nb-white);
+  --surface-card:       var(--nb-white);
+  --surface-cream:      var(--nb-cream);
+  --surface-blush:      var(--nb-blush);
+  --surface-ink:        var(--nb-wine);     /* footer / dark panels    */
+  --surface-mist:       var(--nb-mist);
+
+  --text-heading:       var(--nb-ink);
+  --text-body:          var(--nb-espresso);
+  --text-muted:         var(--nb-fog);
+  --text-secondary:     var(--nb-stone);
+  --text-on-dark:       #ffffff;
+  --text-on-dark-soft:  rgba(255,255,255,0.78);
+  --text-link:          var(--nb-wine);
+  --text-link-hover:    var(--nb-champagne);
+
+  --border-default:     var(--nb-line);
+  --border-strong:      #d8d2c8;
+  --border-on-dark:     rgba(255,255,255,0.30);
+
+  --button-bg:          var(--nb-wine);
+  --button-text:        #ffffff;
+  --button-bg-hover:    var(--nb-wine-dark);
+
+  --rule-gold:          rgba(183,129,59,0.65);  /* the eyebrow rule line */
+}

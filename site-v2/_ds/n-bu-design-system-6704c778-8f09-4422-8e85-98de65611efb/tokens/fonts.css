@@ -1,0 +1,14 @@
+/* ------------------------------------------------------------------
+   Nēbu · Webfonts
+   The current Nēbu storefront (2026 redesign) is set in Manrope — a
+   geometric humanist sans used at light weights for display and at
+   uppercase + wide tracking for eyebrows and nav. Frank Ruhl Libre is
+   the editorial serif carried over from the legacy theme, used sparingly
+   for italic emphasis and long-form prose.
+
+   NOTE: loaded from the Google Fonts CDN (these ARE the brand families —
+   no substitution). If you need self-hosted binaries, swap the @import
+   below for local @font-face rules.
+------------------------------------------------------------------ */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Frank+Ruhl+Libre:ital,wght@0,300;0,400;0,500;1,400;1,500&display=swap');

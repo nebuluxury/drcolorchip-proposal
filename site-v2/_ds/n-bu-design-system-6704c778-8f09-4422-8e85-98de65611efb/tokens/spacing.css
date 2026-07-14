@@ -1,0 +1,53 @@
+/* ------------------------------------------------------------------
+   Nēbu · Spacing, radii, shadows, layout
+   Restrained, editorial. Small radii (3px buttons), hairline borders,
+   soft wine-tinted shadows, slow refined easing.
+------------------------------------------------------------------ */
+
+:root {
+  /* ---- Spacing (4px base) ---------------------------------------- */
+  --sp-1:   4px;
+  --sp-2:   8px;
+  --sp-3:   12px;
+  --sp-4:   16px;
+  --sp-5:   20px;
+  --sp-6:   24px;
+  --sp-8:   32px;
+  --sp-10:  40px;
+  --sp-12:  48px;
+  --sp-16:  64px;
+  --sp-20:  80px;
+  --sp-24:  96px;
+
+  /* ---- Radii (luxury = restrained) ------------------------------- */
+  --radius-xs:   2px;
+  --radius-sm:   3px;   /* buttons, badges            */
+  --radius-md:   6px;
+  --radius-lg:   12px;  /* cards, dialogs             */
+  --radius-xl:   20px;
+  --radius-pill: 999px;
+
+  /* ---- Borders --------------------------------------------------- */
+  --bw-hair:  1px;
+  --bw-thin:  1.5px;
+  --bw-thick: 2px;
+
+  /* ---- Shadows (soft, wine-tinted) ------------------------------- */
+  --shadow-xs:   0 1px 2px rgba(3,3,3,0.05);
+  --shadow-sm:   0 1px 3px rgba(3,3,3,0.06), 0 1px 2px rgba(3,3,3,0.04);
+  --shadow-card: 0 1px 3px rgba(3,3,3,0.05), 0 10px 30px rgba(78,3,20,0.07);
+  --shadow-pop:  0 12px 40px rgba(78,3,20,0.16), 0 2px 8px rgba(3,3,3,0.08);
+  --shadow-ring: 0 0 0 3px rgba(183,129,59,0.30);  /* gold focus ring */
+
+  /* ---- Layout ---------------------------------------------------- */
+  --container:        1440px;
+  --container-narrow: 1120px;
+  --gutter:           24px;
+
+  /* ---- Motion ---------------------------------------------------- */
+  --ease-brand:  cubic-bezier(0.4, 0, 0.2, 1); /* @kind other */
+  --ease-out:    cubic-bezier(0.25, 0.46, 0.45, 0.94); /* @kind other */
+  --dur-fast:    0.18s; /* @kind other */
+  --dur-base:    0.28s; /* @kind other */
+  --dur-slow:    0.6s; /* @kind other */
+}
