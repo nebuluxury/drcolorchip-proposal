@@ -1,0 +1,387 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "components/commerce/**",
+              "components/core/**",
+              "components/forms/**",
+              "redesigns/account/**",
+              "redesigns/fragrances/**",
+              "redesigns/homepage/**",
+              "ui_kits/storefront/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Manrope|Frank Ruhl Libre))/i]",
+        "message": "Font not provided by the design system. Available: Manrope, Frank Ruhl Libre."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Badge'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|variant|style|key|ref|className|style|children)$/]",
+        "message": "<Badge> doesn't accept that prop. Declared props: children, variant, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Badge'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:wine|gold|sale|soft|cream|outline)$/]",
+        "message": "<Badge> variant must be one of 'wine' | 'gold' | 'sale' | 'soft' | 'cream' | 'outline'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|variant|size|arrow|fullWidth|disabled|href|onClick|type|style|key|ref|className|style|children)$/]",
+        "message": "<Button> doesn't accept that prop. Declared props: children, variant, size, arrow, fullWidth, disabled, href, onClick, type, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:primary|gold|outline|ghost|quiet)$/]",
+        "message": "<Button> variant must be one of 'primary' | 'gold' | 'outline' | 'ghost' | 'quiet'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:sm|md|lg)$/]",
+        "message": "<Button> size must be one of 'sm' | 'md' | 'lg'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='type'] > Literal[value!=/^(?:button|submit|reset)$/]",
+        "message": "<Button> type must be one of 'button' | 'submit' | 'reset'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Eyebrow'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|tone|rules|align|style|key|ref|className|style|children)$/]",
+        "message": "<Eyebrow> doesn't accept that prop. Declared props: children, tone, rules, align, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Eyebrow'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:gold|light|wine|muted)$/]",
+        "message": "<Eyebrow> tone must be one of 'gold' | 'light' | 'wine' | 'muted'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Eyebrow'] > JSXAttribute[name.name='align'] > Literal[value!=/^(?:center|left)$/]",
+        "message": "<Eyebrow> align must be one of 'center' | 'left'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Input'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|id|type|placeholder|value|onChange|hint|error|onDark|style|key|ref|className|style|children)$/]",
+        "message": "<Input> doesn't accept that prop. Declared props: label, id, type, placeholder, value, onChange, hint, error, onDark, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='NewsletterForm'] > JSXAttribute > JSXIdentifier[name!=/^(?:eyebrow|title|blurb|buttonLabel|onSubmit|style|key|ref|className|style|children)$/]",
+        "message": "<NewsletterForm> doesn't accept that prop. Declared props: eyebrow, title, blurb, buttonLabel, onSubmit, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ProductBadge'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|variant|key|ref|className|style|children)$/]",
+        "message": "<ProductBadge> doesn't accept that prop. Declared props: label, variant."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ProductBadge'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:wine|gold|sale|soft|cream|outline)$/]",
+        "message": "<ProductBadge> variant must be one of 'wine' | 'gold' | 'sale' | 'soft' | 'cream' | 'outline'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ScentTile'] > JSXAttribute > JSXIdentifier[name!=/^(?:icon|label|count|href|active|style|key|ref|className|style|children)$/]",
+        "message": "<ScentTile> doesn't accept that prop. Declared props: icon, label, count, href, active, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SectionHeading'] > JSXAttribute > JSXIdentifier[name!=/^(?:eyebrow|title|emphasis|subtitle|align|onDark|style|key|ref|className|style|children)$/]",
+        "message": "<SectionHeading> doesn't accept that prop. Declared props: eyebrow, title, emphasis, subtitle, align, onDark, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SectionHeading'] > JSXAttribute[name.name='align'] > Literal[value!=/^(?:center|left)$/]",
+        "message": "<SectionHeading> align must be one of 'center' | 'left'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='StarRating'] > JSXAttribute > JSXIdentifier[name!=/^(?:value|max|count|size|showValue|style|key|ref|className|style|children)$/]",
+        "message": "<StarRating> doesn't accept that prop. Declared props: value, max, count, size, showValue, style."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "Badge": {
+        "replaces": []
+      },
+      "Button": {
+        "replaces": []
+      },
+      "Eyebrow": {
+        "replaces": []
+      },
+      "Input": {
+        "replaces": []
+      },
+      "NewsletterForm": {
+        "replaces": []
+      },
+      "ProductBadge": {
+        "replaces": []
+      },
+      "ScentTile": {
+        "replaces": []
+      },
+      "SectionHeading": {
+        "replaces": []
+      },
+      "StarRating": {
+        "replaces": []
+      }
+    },
+    "tokens": [
+      "--accent",
+      "--accent-soft",
+      "--border-default",
+      "--border-on-dark",
+      "--border-strong",
+      "--brand",
+      "--brand-contrast",
+      "--brand-hover",
+      "--button-bg",
+      "--button-bg-hover",
+      "--button-text",
+      "--bw-hair",
+      "--bw-thick",
+      "--bw-thin",
+      "--container",
+      "--container-narrow",
+      "--dur-base",
+      "--dur-fast",
+      "--dur-slow",
+      "--ease-brand",
+      "--ease-out",
+      "--font-body",
+      "--font-display",
+      "--font-sans",
+      "--font-serif",
+      "--fs-body",
+      "--fs-body-lg",
+      "--fs-body-sm",
+      "--fs-caption",
+      "--fs-display",
+      "--fs-eyebrow",
+      "--fs-h1",
+      "--fs-h2",
+      "--fs-h3",
+      "--fs-h4",
+      "--fw-bold",
+      "--fw-extrabold",
+      "--fw-light",
+      "--fw-medium",
+      "--fw-regular",
+      "--fw-semibold",
+      "--gutter",
+      "--lh-normal",
+      "--lh-relaxed",
+      "--lh-snug",
+      "--lh-tight",
+      "--ls-body",
+      "--ls-button",
+      "--ls-display",
+      "--ls-eyebrow",
+      "--ls-heading",
+      "--ls-nav",
+      "--nb-amber",
+      "--nb-blush",
+      "--nb-champagne",
+      "--nb-cream",
+      "--nb-error",
+      "--nb-espresso",
+      "--nb-fog",
+      "--nb-gold",
+      "--nb-gold-soft",
+      "--nb-info",
+      "--nb-ink",
+      "--nb-line",
+      "--nb-mist",
+      "--nb-rust",
+      "--nb-rust-dark",
+      "--nb-stone",
+      "--nb-success",
+      "--nb-white",
+      "--nb-wine",
+      "--nb-wine-dark",
+      "--nb-wine-soft",
+      "--radius-lg",
+      "--radius-md",
+      "--radius-pill",
+      "--radius-sm",
+      "--radius-xl",
+      "--radius-xs",
+      "--rule-gold",
+      "--shadow-card",
+      "--shadow-pop",
+      "--shadow-ring",
+      "--shadow-sm",
+      "--shadow-xs",
+      "--sp-1",
+      "--sp-10",
+      "--sp-12",
+      "--sp-16",
+      "--sp-2",
+      "--sp-20",
+      "--sp-24",
+      "--sp-3",
+      "--sp-4",
+      "--sp-5",
+      "--sp-6",
+      "--sp-8",
+      "--surface-blush",
+      "--surface-card",
+      "--surface-cream",
+      "--surface-ink",
+      "--surface-mist",
+      "--surface-page",
+      "--text-body",
+      "--text-heading",
+      "--text-link",
+      "--text-link-hover",
+      "--text-muted",
+      "--text-on-dark",
+      "--text-on-dark-soft",
+      "--text-secondary"
+    ],
+    "tokenKinds": {
+      "--nb-wine": "color",
+      "--nb-wine-dark": "color",
+      "--nb-wine-soft": "color",
+      "--nb-rust": "color",
+      "--nb-rust-dark": "color",
+      "--nb-gold": "color",
+      "--nb-gold-soft": "color",
+      "--nb-champagne": "color",
+      "--nb-amber": "color",
+      "--nb-ink": "color",
+      "--nb-espresso": "color",
+      "--nb-stone": "color",
+      "--nb-fog": "color",
+      "--nb-line": "color",
+      "--nb-mist": "color",
+      "--nb-white": "color",
+      "--nb-cream": "color",
+      "--nb-blush": "color",
+      "--nb-success": "color",
+      "--nb-error": "color",
+      "--nb-info": "color",
+      "--brand": "color",
+      "--brand-hover": "color",
+      "--brand-contrast": "color",
+      "--accent": "color",
+      "--accent-soft": "color",
+      "--surface-page": "color",
+      "--surface-card": "color",
+      "--surface-cream": "color",
+      "--surface-blush": "color",
+      "--surface-ink": "color",
+      "--surface-mist": "color",
+      "--text-heading": "font",
+      "--text-body": "font",
+      "--text-muted": "font",
+      "--text-secondary": "font",
+      "--text-on-dark": "font",
+      "--text-on-dark-soft": "font",
+      "--text-link": "font",
+      "--text-link-hover": "font",
+      "--border-default": "color",
+      "--border-strong": "color",
+      "--border-on-dark": "color",
+      "--button-bg": "color",
+      "--button-text": "font",
+      "--button-bg-hover": "color",
+      "--rule-gold": "color",
+      "--font-sans": "font",
+      "--font-serif": "font",
+      "--font-display": "font",
+      "--font-body": "font",
+      "--fw-light": "font",
+      "--fw-regular": "font",
+      "--fw-medium": "font",
+      "--fw-semibold": "font",
+      "--fw-bold": "font",
+      "--fw-extrabold": "font",
+      "--fs-display": "font",
+      "--fs-h1": "font",
+      "--fs-h2": "font",
+      "--fs-h3": "font",
+      "--fs-h4": "font",
+      "--fs-body-lg": "font",
+      "--fs-body": "font",
+      "--fs-body-sm": "font",
+      "--fs-caption": "font",
+      "--fs-eyebrow": "font",
+      "--lh-tight": "font",
+      "--lh-snug": "font",
+      "--lh-normal": "font",
+      "--lh-relaxed": "font",
+      "--ls-display": "font",
+      "--ls-heading": "font",
+      "--ls-body": "font",
+      "--ls-eyebrow": "font",
+      "--ls-button": "font",
+      "--ls-nav": "font",
+      "--sp-1": "spacing",
+      "--sp-2": "spacing",
+      "--sp-3": "spacing",
+      "--sp-4": "spacing",
+      "--sp-5": "spacing",
+      "--sp-6": "spacing",
+      "--sp-8": "spacing",
+      "--sp-10": "spacing",
+      "--sp-12": "spacing",
+      "--sp-16": "spacing",
+      "--sp-20": "spacing",
+      "--sp-24": "spacing",
+      "--radius-xs": "radius",
+      "--radius-sm": "radius",
+      "--radius-md": "radius",
+      "--radius-lg": "radius",
+      "--radius-xl": "radius",
+      "--radius-pill": "radius",
+      "--bw-hair": "spacing",
+      "--bw-thin": "spacing",
+      "--bw-thick": "spacing",
+      "--shadow-xs": "shadow",
+      "--shadow-sm": "shadow",
+      "--shadow-card": "shadow",
+      "--shadow-pop": "shadow",
+      "--shadow-ring": "shadow",
+      "--container": "spacing",
+      "--container-narrow": "spacing",
+      "--gutter": "spacing",
+      "--ease-brand": "other",
+      "--ease-out": "other",
+      "--dur-fast": "other",
+      "--dur-base": "other",
+      "--dur-slow": "other"
+    },
+    "fontFamilies": [
+      "Frank Ruhl Libre",
+      "Manrope"
+    ]
+  }
+}

@@ -96,6 +96,9 @@ nav.main a:hover{color:var(--blue-deep)}
 .ccard{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;cursor:pointer;transition:.18s transform,.18s box-shadow,.18s border-color}
 .ccard:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#cfe0f5}
 .swatch{position:relative;height:126px;width:100%;overflow:hidden}
+@keyframes swSweep{from{background-position:-140% 0}to{background-position:240% 0}}
+.swatch .shine,.swatch::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;background:linear-gradient(110deg,transparent 34%,rgba(255,255,255,.5) 50%,transparent 66%);background-size:220% 100%;animation:swSweep 3.4s linear infinite;mix-blend-mode:overlay}
+.swatch.finish-metallic::before,.swatch.finish-pearl::before,.swatch.finish-tricoat::before{background-image:radial-gradient(rgba(255,255,255,.85) .6px,transparent .7px),linear-gradient(110deg,transparent 34%,rgba(255,255,255,.55) 50%,transparent 66%);background-size:4px 4px,220% 100%;opacity:.5;mix-blend-mode:screen;animation:swSweep 3.4s linear infinite}
 .swatch::after{content:"";position:absolute;inset:0;pointer-events:none;background:
   linear-gradient(158deg,rgba(255,255,255,.62) 0%,rgba(255,255,255,.17) 19%,transparent 43%),
   radial-gradient(135% 92% at 80% 122%,rgba(0,0,0,.26),transparent 56%);
