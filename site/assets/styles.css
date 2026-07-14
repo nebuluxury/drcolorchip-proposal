@@ -353,9 +353,9 @@ footer a:hover{color:#fff}
 .hcol-head p{color:var(--muted);font-size:14px;margin-top:4px}
 .hsteps{list-style:none;margin:0;padding:0;display:grid;gap:14px}
 .hsteps li{display:flex;gap:14px;align-items:flex-start}
-.hn{width:34px;height:34px;border-radius:10px;flex:none;display:grid;place-items:center;font-family:Sora;font-weight:800;font-size:15px;color:#fff}
-.hcol.lite .hn{background:var(--grad-hot)}
-.hcol.pro .hn{background:var(--grad)}
+.hn{width:34px;height:34px;border-radius:10px;flex:none;display:grid;place-items:center;font-family:Sora;font-weight:800;font-size:15px;background:#fff}
+.hcol.lite .hn{border:2px solid var(--orange);color:var(--orange)}
+.hcol.pro .hn{border:2px solid var(--blue);color:var(--blue)}
 .hsteps li b{display:block;font-family:Sora;font-weight:700;font-size:15.5px;color:var(--ink)}
 .hsteps li span{font-size:14px;color:var(--muted)}
 
