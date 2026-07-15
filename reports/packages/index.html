@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Simple System &amp; Kit Chooser | Dr. ColorChip x DV8 Web</title>
+<meta name="description" content="One page that makes Dr. ColorChip instantly clear: learn the easy few-step system, compare the real kits, and start basic then add exactly the tools you need.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../report.css">
+<style>
+  .steps3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:26px}
+  .step{position:relative;border:1px solid var(--line);border-radius:16px;padding:26px}
+  .step .n{width:34px;height:34px;border-radius:50%;background:var(--ink);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+  .kits{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:28px;align-items:stretch}
+  .kit{position:relative;border:1px solid var(--line);border-radius:18px;padding:26px 24px;display:flex;flex-direction:column;background:#fff;transition:transform .25s,box-shadow .25s}
+  .kit:hover{transform:translateY(-5px);box-shadow:0 26px 50px rgba(11,18,32,.1)}
+  .kit.best{border:2px solid var(--red)}
+  .kit .flag{position:absolute;top:-12px;left:22px;background:var(--red);color:#fff;font-size:10.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:4px}
+  .kit .pr{font-weight:300;font-size:38px;letter-spacing:-.02em;margin:6px 0 2px}
+  .kit .was{font-size:14px;color:var(--faint);text-decoration:line-through;margin-left:8px}
+  .kit .bestfor{font-size:12.5px;color:var(--red);font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin:4px 0 14px}
+  .kit ul{list-style:none;padding:0;margin:0 0 18px;display:flex;flex-direction:column;gap:8px}
+  .kit li{display:flex;gap:9px;align-items:flex-start;font-size:14px;color:var(--text)}
+  .kit li svg{flex:none;margin-top:2px}
+  .kit .btn{margin-top:auto;width:100%;justify-content:center}
+  /* configurator */
+  .cfg{display:grid;grid-template-columns:1.3fr .7fr;gap:24px;margin-top:28px;align-items:start}
+  .addons{display:flex;flex-direction:column;gap:12px}
+  .addon{display:flex;gap:14px;align-items:flex-start;border:1px solid var(--line);border-radius:12px;padding:16px 18px;cursor:pointer;transition:border-color .2s,background .2s}
+  .addon:hover{border-color:var(--red)}
+  .addon input{margin-top:3px;width:18px;height:18px;accent-color:var(--red);flex:none}
+  .addon .t{font-weight:700;font-size:15px}
+  .addon .d{font-size:13px;color:var(--muted);margin-top:2px}
+  .addon .p{margin-left:auto;font-weight:800;font-size:15px;white-space:nowrap}
+  .totalbox{position:sticky;top:80px;border:1px solid var(--line);border-radius:18px;padding:26px;background:var(--soft)}
+  .totalbox .base{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);padding:8px 0;border-bottom:1px solid var(--line)}
+  .totalbox .tot{display:flex;justify-content:space-between;align-items:baseline;margin:16px 0 4px}
+  .totalbox .tot b{font-weight:300;font-size:40px;letter-spacing:-.02em}
+  .totalbox .cap{font-size:13px;color:var(--muted);margin-bottom:18px}
+  #chosen{font-size:12.5px;color:var(--faint);margin-top:12px;line-height:1.5}
+  @media(max-width:760px){.cfg{grid-template-columns:1fr}.totalbox{position:static}}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a href="../"><img src="../../site/assets/logo-full.png" alt="Dr. ColorChip"></a>
+    <a class="bk" href="../">&larr; All reports</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Report 04 &middot; Product clarity</span>
+    <h1>One system. A few simple steps. <b>Pick how far you go.</b></h1>
+    <p class="lede">The single hardest thing for a new customer is realizing how easy this is. Every kit uses the <em>same</em> factory-matched paint and the <em>same</em> blend step - the only thing that changes is how many tools you get and how big a job you can tackle. Here's the whole thing on one page.</p>
+  </div>
+</section>
+
+<!-- THE SYSTEM -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">It's easier than it looks</span>
+    <h2 style="margin-top:14px">The whole system in <i>3 steps.</i></h2>
+    <div class="steps3">
+      <div class="step"><div class="n">1</div><h3>Match</h3><p>Find your car's exact factory color by code or VIN. Your paint is custom-mixed to match - no guessing, no paint-code hunting.</p></div>
+      <div class="step"><div class="n">2</div><h3>Apply</h3><p>Brush the paint right into the chip, or use the Squirt &amp; Squeegee for bigger scratches. Takes minutes, no experience needed.</p></div>
+      <div class="step"><div class="n">3</div><h3>Blend</h3><p>The SealAct blending solution wipes away the excess and feathers the edges into your paint - the step that makes it near-invisible. <b>This is the magic.</b></p></div>
+    </div>
+    <div class="callout" style="margin-top:24px"><b>The one thing to remember:</b> every kit does these same 3 steps with the same paint. More expensive kits just add <b>better applicator tools</b> (mini-squeegee, pipettes, full squeegee) and <b>more product</b> - so you can fix bigger areas, more spots, or a second car. Learn it once; pick the size that fits your job.</div>
+  </div>
+</section>
+
+<!-- THE 4 KITS -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Choose your kit</span>
+    <h2 style="margin-top:14px">Four kits, <i>one decision:</i> how big is the job?</h2>
+    <div class="kits">
+      <div class="kit">
+        <h3>Basic Kit</h3>
+        <div class="pr">$49.95</div>
+        <div class="bestfor">A few small chips</div>
+        <ul>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FF3D2E" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg>0.5 oz custom-matched paint</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FF3D2E" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg>SealAct blend + brush</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FF3D2E" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg>Cloth, glove, instructions</li>
+          <li style="color:var(--faint)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#B9C0CB" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg>No squeegee or pipettes</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://drcolorchip.com/product/basic-kit-touch-up-paint-chip-repair/" target="_blank" rel="noopener">Start basic</a>
+      </div>
+
+      <div class="kit">
+        <h3>Mini-Squeegee Kit</h3>
+        <div class="pr">$56.95</div>
+        <div class="bestfor">A cluster of small chips</div>
+        <ul>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FF3D2E" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg>Everything in Basic</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FF3D2E" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg><b>+ Mini-squeegee</b> for tight spots</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FF3D2E" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg><b>+ 5 pipettes</b> for precise dabs</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FF3D2E" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg>More SealAct, 2 microbrushes</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://drcolorchip.com/product/mini-squeegee-kit/" target="_blank" rel="noopener">Add precision tools</a>
+      </div>
+
+      <div class="kit best">
+        <span class="flag">Best value</span>
+        <h3>Squirt 'n Squeegee Plus</h3>
+        <div class="pr">$57.75<span class="was">$67.95</span></div>
+        <div class="bestfor">Heavy road-rash, one car</div>
+        <ul>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FF3D2E" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg><b>Double the paint</b> (1 oz) + 4 oz SealAct</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FF3D2E" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg><b>Full-size + mini squeegee</b></li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FF3D2E" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg>5 pipettes, 2 brushes, 2 gloves</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FF3D2E" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg>Covers a whole car's worth of chips</li>
+        </ul>
+        <a class="btn btn-primary" href="https://drcolorchip.com/product/squirt-n-squeegee-plus-kit/" target="_blank" rel="noopener">Get the top seller</a>
+      </div>
+
+      <div class="kit">
+        <h3>Multi-Car Kit</h3>
+        <div class="pr">$105.95<span class="was">$124.95</span></div>
+        <div class="bestfor">Two cars / two colors</div>
+        <ul>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FF3D2E" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg><b>2 paint bottles</b> (2 colors) + 2 SealAct</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FF3D2E" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg><b>+ ColorPrep</b> panel cleaner</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FF3D2E" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg>10 pipettes, 3-pk squeegees</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FF3D2E" stroke-width="2"><path d="m5 12 5 5 9-11"/></svg>Do the whole household</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://www.drcolorchip.com/product/multi-car-kit/" target="_blank" rel="noopener">Cover multiple cars</a>
+      </div>
+    </div>
+    <p class="src" style="margin-top:14px">Prices are the same for every color - solid, metallic, or pearl. Live prices at drcolorchip.com; sale pricing shown where active.</p>
+  </div>
+</section>
+
+<!-- BUILD YOUR KIT (interactive) -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Or build it your way</span>
+    <h2 style="margin-top:14px">Start basic, <i>add exactly what you need.</i></h2>
+    <p style="color:var(--muted);max-width:660px">Prefer to keep it simple? Start with the Basic Kit and bolt on just the tools that unlock the job you actually have. Tick what you want - your total updates live.</p>
+    <div class="cfg">
+      <div class="addons" id="addons">
+        <label class="addon"><input type="checkbox" data-price="9.95" data-label="Accessory Tools Pack"><span><span class="t">Accessory Tools Pack</span><span class="d">Pipettes + microbrushes for precise, controlled dabs on lots of little chips.</span></span><span class="p">+$9.95</span></label>
+        <label class="addon"><input type="checkbox" data-price="9.95" data-label="3-pk Squeegees"><span><span class="t">Squeegee 3-pack</span><span class="d">Full-size squeegees so you can cover bigger scratches and whole panels, not just dots.</span></span><span class="p">+$9.95</span></label>
+        <label class="addon"><input type="checkbox" data-price="6.95" data-label="ColorPrep cleaner"><span><span class="t">Dr. ColorPrep cleaner</span><span class="d">Deep-cleans wax, tar &amp; contamination first, so the paint bonds and lasts on tougher spots.</span></span><span class="p">+$6.95</span></label>
+        <label class="addon"><input type="checkbox" data-price="31.95" data-label="Extra 1 oz paint"><span><span class="t">Extra 1 oz paint</span><span class="d">Triple your paint for road-rash-level damage, big areas, or a second vehicle.</span></span><span class="p">+$31.95</span></label>
+        <label class="addon"><input type="checkbox" data-price="24.95" data-label="Extra 4 oz SealAct"><span><span class="t">Extra SealAct (4 oz)</span><span class="d">More blending solution = more spots and cleaner, more forgiving blends.</span></span><span class="p">+$24.95</span></label>
+        <label class="addon"><input type="checkbox" data-price="4.95" data-label="Microfiber 3-pk"><span><span class="t">Microfiber 3-pack</span><span class="d">Lint-free towels for a spotless final wipe-down.</span></span><span class="p">+$4.95</span></label>
+      </div>
+      <div class="totalbox">
+        <div class="base"><span>Basic Kit</span><span>$49.95</span></div>
+        <div id="addlines"></div>
+        <div class="tot"><span>Your total</span><b id="total">$49.95</b></div>
+        <div class="cap" id="cap">The essentials to fix a few chips.</div>
+        <a class="btn btn-primary" style="width:100%;justify-content:center" href="https://drcolorchip.com/product/basic-kit-touch-up-paint-chip-repair/" target="_blank" rel="noopener">Build this kit &rarr;</a>
+        <div id="chosen"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="cta-band">
+    <div class="sq" style="width:56px;height:72px;background:#00B84D;top:-15px;left:10%;--r:-7deg;animation:floaty 7s ease-in-out infinite;box-shadow:0 18px 40px rgba(0,184,77,.3)"></div>
+    <div class="sq" style="width:50px;height:64px;background:#FF3D2E;bottom:-14px;right:11%;--r:9deg;animation:floaty 8s ease-in-out .5s infinite;box-shadow:0 18px 40px rgba(255,61,46,.34)"></div>
+    <div style="position:relative">
+      <h2 style="font-size:clamp(28px,4.4vw,48px)">Same easy system. <i>Right-sized</i> to your job.</h2>
+      <p style="max-width:540px;margin:14px auto 26px">This one-page structure can replace the confusing product grid on the site - learn it once, then choose.</p>
+      <a class="btn btn-primary" href="../">Back to the hub &rarr;</a>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer class="site">
+  <div class="wrap"><p style="margin:0"><span class="demoflag">Report 04</span> &nbsp; The simple system &amp; kit chooser &middot; prepared for Dr. ColorChip by DV8 Web &middot; 2026</p></div>
+</footer>
+
+<script>
+(function(){
+  var base=49.95;
+  var boxes=[].slice.call(document.querySelectorAll('#addons input'));
+  var totalEl=document.getElementById('total'), linesEl=document.getElementById('addlines'),
+      capEl=document.getElementById('cap'), chosenEl=document.getElementById('chosen');
+  function money(n){return '$'+n.toFixed(2);}
+  function update(){
+    var sum=base, lines='', names=[];
+    boxes.forEach(function(b){
+      if(b.checked){var p=parseFloat(b.dataset.price);sum+=p;names.push(b.dataset.label);
+        lines+='<div class="base"><span>'+b.dataset.label+'</span><span>+'+money(p)+'</span></div>';}
+    });
+    linesEl.innerHTML=lines;
+    totalEl.textContent=money(sum);
+    capEl.textContent = names.length? 'Now you can also: '+names.length+' upgrade'+(names.length>1?'s':'')+' added.' : 'The essentials to fix a few chips.';
+    chosenEl.textContent = names.length? 'Basic Kit + '+names.join(' + ') : '';
+  }
+  boxes.forEach(function(b){b.addEventListener('change',update);});
+  update();
+})();
+</script>
+</body>
+</html>
